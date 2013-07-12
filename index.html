@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta charset="UTF-8" />
+        <title>BoxSendIt</title>
+        <link rel="stylesheet" href="screen.css" media="all" />
+    </head>
+    <body>
+    <div id="main">
+    	
+    	<div class="header">
+			<h1>File too big for email? Use BoxSendIt.</h1>
+			<h2>No need to register!</h2>
+		</div>
+
+		<form id="boxsendit" method="post" enctype="multipart/form-data" action="/upload.php" class="uniForm">
+		
+			<fieldset><legend>Send a file now</legend>
+
+				<p class="first">
+					<label for="from_email">Your email address:</label>
+					<input type="text" name="from_email" id="from_email" size="50" />
+				</p>
+				<p>
+					<label for="to_email">Recipient's email address:</label>
+					<input type="text" name="to_email" id="to_email" size="50" />
+				</p>
+				<p>
+					<label for="file">File:</label>
+					<input type="file" name="file" id="file" />
+				</p>													
+				<p>
+					<label for="message">Message:</label>
+					<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				</p>					
+				
+				<button type="button" id="btnx">Send</button>
+
+                <div id="response"></div>
+			</fieldset>					
+						
+		</form>	
+
+	</div>
+
+
+    <iframe id="upload_target" name="upload_target" src="" style="width:0;height:0;border:0px solid #fff;"></iframe>
+
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="upload.js"></script>
+
+    </body>
+</html>
